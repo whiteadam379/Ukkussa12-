@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Jil hub🍆🍆🍆🍆</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #0a0a0a;
+            color: #f0f0f0;
+            line-height: 1.5;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            z-index: 100;
+            padding: 1rem 2rem;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #e8b55a, #c97e2a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo span {
+            font-size: 1.3rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #e8b55a;
+        }
+
+        .auth-btn {
+            background: #e8b55a20;
+            border: 1px solid #e8b55a;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            color: #e8b55a;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .auth-btn:hover {
+            background: #e8b55a;
+            color: #0a0a0a;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .username-display {
+            color: #e8b55a;
+            font-size: 0.9rem;
+        }
+
+        .logout-btn {
+            background: none;
+            border: 1px solid #ff6b6b;
+            color: #ff6b6b;
+            padding: 0.3rem 0.8rem;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .logout-btn:hover {
+            background: #ff6b6b;
+            color: #0a0a0a;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 2rem 2rem;
+            background: radial-gradient(circle at 30% 10%, #1a1a2a, #0a0a0a);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "🦅";
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0.03;
+            bottom: -20px;
+            right: 20px;
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #e8b55a, #c97e2a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #aaa;
+            margin-top: 0.5rem;
+        }
+
+        .sinhala-tag {
+            font-size: 0.8rem;
+            color: #e8b55a;
+            margin-top: 0.5rem;
+        }
+
+        .gallery-container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .post-card {
+            background: #111;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #2a2a2a;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.6);
+            border-color: #e8b55a33;
+        }
+
+        /* FULL IMAGE - No cropping, image covers entire container */
+        .post-image {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: #1a1a1a;
+            position: relative;
+        }
+
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* object-fit: contain; shows the FULL image without cropping */
+            transition: transform 0.5s ease;
+            background: #0a0a0a;
+        }
+
+        .post-card:hover .post-image img {
+            transform: scale(1.02);
+        }
+
+        .post-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(0,0,0,0.6));
+            backdrop-filter: blur(10px);
+            color: #e8b55a;
+            padding: 14px 18px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: center;
+            z-index: 10;
+            border-bottom: 1px solid rgba(232, 181, 90, 0.2);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            letter-spacing: 0.3px;
+            pointer-events: none;
+        }
+
+        .post-content {
+            padding: 1rem 1.2rem 1.2rem;
+        }
+
+        .open-link-btn {
+            display: none;
+            align-items: center;
+            gap: 8px;
+            background: #e8b55a;
+            color: #0a0a0a;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+
+        .open-link-btn:hover {
+            background: #c97e2a;
+            transform: scale(1.02);
+        }
+
+        .black-link-btn {
+            display: none;
+            align-items: center;
+            gap: 8px;
+            background: #1a1a1a;
+            color: #888;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: 1px solid #333;
+            cursor: pointer;
+            width: 100%;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+
+        .black-link-btn:hover {
+            background: #2a2a2a;
+            color: #fff;
+            border-color: #e8b55a44;
+        }
+
+        .post-card.admin-mode .open-link-btn {
+            display: flex;
+        }
+
+        .post-card.admin-mode .black-link-btn {
+            display: flex;
+        }
+
+        .admin-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.8rem;
+            justify-content: center;
+            display: none;
+        }
+
+        .post-card.admin-mode .admin-actions {
+            display: flex;
+        }
+
+        .admin-edit-btn, .admin-delete-btn {
+            background: #2a2a2a;
+            border: none;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            cursor: pointer;
+            color: #ddd;
+            transition: all 0.2s;
+        }
+
+        .admin-edit-btn:hover {
+            background: #e8b55a;
+            color: #0a0a0a;
+        }
+
+        .admin-delete-btn:hover {
+            background: #ff6b6b;
+            color: #0a0a0a;
+        }
+
+        .click-hint {
+            font-size: 0.7rem;
+            color: #666;
+            text-align: center;
+            margin-top: 0.3rem;
+            font-style: italic;
+        }
+
+        .upload-panel {
+            max-width: 700px;
+            margin: 2rem auto 0;
+            background: #111;
+            border-radius: 28px;
+            padding: 2rem;
+            border: 1px solid #e8b55a;
+            text-align: center;
+            display: none;
+        }
+
+        .upload-panel.visible {
+            display: block;
+        }
+
+        .upload-panel h2 {
+            color: #e8b55a;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .upload-panel .sub-text {
+            color: #888;
+            font-size: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: #ccc;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .form-group label .required {
+            color: #ff6b6b;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 14px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            color: white;
+            font-size: 0.9rem;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus {
+            border-color: #e8b55a;
+            outline: none;
+        }
+
+        .form-group input::placeholder {
+            color: #555;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .file-upload-area {
+            border: 2px dashed #444;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: #0a0a0a;
+        }
+
+        .file-upload-area:hover {
+            border-color: #e8b55a;
+            background: #1a1a2a;
+        }
+
+        .file-upload-area .icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .file-upload-area p {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .file-upload-area .file-name {
+            color: #e8b55a;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .file-upload-area input[type="file"] {
+            display: none;
+        }
+
+        .submit-btn {
+            background: #e8b55a;
+            color: #0a0a0a;
+            border: none;
+            padding: 14px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        .submit-btn:hover {
+            background: #c97e2a;
+            transform: scale(1.02);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        #uploadStatus {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: #e8b55a;
+        }
+
+        .redirect-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 5000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            backdrop-filter: blur(20px);
+        }
+
+        .redirect-overlay.active {
+            display: flex;
+        }
+
+        .redirect-overlay .spinner {
+            font-size: 4rem;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .redirect-overlay h2 {
+            color: #e8b55a;
+            margin-top: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .redirect-overlay p {
+            color: #aaa;
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .redirect-overlay .countdown {
+            color: #e8b55a;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 28px;
+            font-size: 2.5rem;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+            z-index: 1001;
+            transition: opacity 0.2s;
+        }
+
+        .close-lightbox:hover {
+            opacity: 0.7;
+        }
+
+        .edit-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 3000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .edit-modal.active {
+            display: flex;
+        }
+
+        .edit-card {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 28px;
+            border: 1px solid #e8b55a;
+            width: 450px;
+            max-width: 90%;
+        }
+
+        .edit-card h3 {
+            color: #e8b55a;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .edit-card label {
+            display: block;
+            font-size: 0.8rem;
+            color: #aaa;
+            margin-top: 10px;
+            margin-bottom: 4px;
+        }
+
+        .edit-card input {
+            width: 100%;
+            padding: 10px 12px;
+            background: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 12px;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .edit-card input:focus {
+            border-color: #e8b55a;
+            outline: none;
+        }
+
+        .edit-btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .edit-btn-group button {
+            flex: 1;
+            padding: 10px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+        }
+
+        .edit-save-btn {
+            background: #e8b55a;
+            color: #0a0a0a;
+        }
+
+        .edit-save-btn:hover {
+            background: #c97e2a;
+        }
+
+        .edit-cancel-btn {
+            background: #333;
+            color: white;
+        }
+
+        .edit-cancel-btn:hover {
+            background: #444;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-card {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 28px;
+            border: 1px solid #e8b55a;
+            width: 340px;
+            max-width: 90%;
+        }
+
+        .modal-card h3 {
+            color: #e8b55a;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .modal-card input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            background: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 12px;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .modal-card button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            background: #e8b55a;
+            border: none;
+            border-radius: 40px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .modal-card button:hover {
+            background: #c97e2a;
+        }
+
+        .switch-mode {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: #aaa;
+            cursor: pointer;
+        }
+
+        .switch-mode span {
+            color: #e8b55a;
+            text-decoration: underline;
+        }
+
+        .error-msg {
+            color: #ff6b6b;
+            font-size: 0.75rem;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1rem;
+            }
+            .post-title {
+                font-size: 0.9rem;
+                padding: 10px 14px;
+            }
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            .upload-panel {
+                padding: 1.5rem;
+            }
+            .edit-card {
+                padding: 1.5rem;
+            }
+            .redirect-overlay h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">🦅 <span>xkindom3 </span> | උකුස්සා</div>
+        <div class="nav-links" id="navLinks">
+            <a href="#">GALLERY</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+            <button class="auth-btn" id="authBtn">🔐 Login / Sign Up</button>
+            <div class="user-info" id="userInfo" style="display:none;">
+                <span class="username-display" id="usernameDisplay"></span>
+                <button class="logout-btn" id="logoutBtn">Logout</button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    
+    <p>sri lnk and indian xxxxx leek video </p>
+    <div class="sinhala-tag">🔗
+  please  shere and my web site</div>
+</section>
+
+<div class="gallery-container">
+    <div class="gallery-grid" id="galleryGrid">
+       
+                
+             
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Upload Form -->
+    <div class="upload-panel" id="uploadPanel">
+        <h2>📝 Create New Post</h2>
+        <p class="sub-text">Fill in the details below to create a new post</p>
+
+        <form id="uploadForm">
+            <div class="form-group">
+                <label>📝 Title <span class="required">*</span></label>
+                <input type="text" id="postTitle" placeholder="Enter post title..." required>
+            </div>
+
+            <div class="form-group">
+                <label>🖼️ Image <span class="required">*</span></label>
+                <div class="file-upload-area" id="fileUploadArea">
+                    <div class="icon">📸</div>
+                    <p>Click to select an image</p>
+                    <div class="file-name" id="fileNameDisplay">No file selected</div>
+                    <input type="file" id="imageFile" accept="image/jpeg, image/png, image/jpg, image/webp" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>🔗 Open Link (New Tab) <span class="required">*</span></label>
+                    <input type="url" id="openLink" placeholder="https://example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>⬇️ Black Link (Redirect) <span class="required">*</span></label>
+                    <input type="url" id="blackLink" placeholder="https://example.com" required>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">📤 Publish Post</button>
+        </form>
+
+        <div id="uploadStatus"></div>
+    </div>
+</div>
+
+<footer>
+    <p>🦅 UKUSSA · Click any post → Open Link in Neab + Current Page Redirects after 3s</p>
+    >
+</footer>
+
+<!-- Redirect Overlay -->
+<div class="redirect-overlay" id="redirectOverlay">
+    <div class="spinner">🔄</div>
+    <h2>⏳ Redirecting...</h2>
+    <p>Current page will redirect to the destination shortly</p>
+    <div class="countdown" id="countdownDisplay">3</div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <button class="close-lightbox" id="closeLightboxBtn">✕</button>
+    <img class="lightbox-img" id="lightboxImg" alt="">
+</div>
+
+<!-- Edit Modal -->
+<div class="edit-modal" id="editModal">
+    <div class="edit-card">
+        <h3>✏️ Edit Post</h3>
+        <label>📝 Title</label>
+        <input type="text" id="editTitle" placeholder="Enter title...">
+        <label>🔗 Open Link (New Tab)</label>
+        <input type="url" id="editOpenLink" placeholder="https://example.com">
+        <label>⬇️ Black Link (Redirect)</label>
+        <input type="url" id="editBlackLink" placeholder="https://example.com">
+        <div class="edit-btn-group">
+            <button class="edit-save-btn" id="editSaveBtn">💾 Save Changes</button>
+            <button class="edit-cancel-btn" id="editCancelBtn">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<!-- Auth Modal -->
+<div class="modal" id="authModal">
+    <div class="modal-card">
+        <h3 id="modalTitle">Login</h3>
+        <div id="signupFields" style="display:none;">
+            <input type="text" id="signupUsername" placeholder="Username" autocomplete="off">
+        </div>
+        <input type="email" id="authEmail" placeholder="Email address" autocomplete="off">
+        <input type="password" id="authPassword" placeholder="Password">
+        <button id="submitAuthBtn">Login</button>
+        <div class="switch-mode" id="switchMode">
+            Don't have an account? <span>Sign Up</span>
+        </div>
+        <div class="error-msg" id="authError"></div>
+    </div>
+</div>
+
+<script>
+    // ============= FIXED ADMIN ACCOUNT =============
+    const FIXED_ADMIN = {
+        username: "jmadawa",
+        email: "jmadawa64@gmail.com",
+        password: "admin123",  // <-- PASSWORD CHANGED FROM "joker165" TO "admin123"
+        isAdmin: true,
+        isFixedAdmin: true
+    };
+
+    // ============= USER MANAGEMENT =============
+    let currentUser = null;
+    let isAdmin = false;
+    let currentMode = 'login';
+    let selectedFile = null;
+
+    // DOM Elements
+    const galleryGrid = document.getElementById('galleryGrid');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeLightbox = document.getElementById('closeLightboxBtn');
+    const authBtn = document.getElementById('authBtn');
+    const authModal = document.getElementById('authModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const signupFields = document.getElementById('signupFields');
+    const signupUsername = document.getElementById('signupUsername');
+    const authEmail = document.getElementById('authEmail');
+    const authPassword = document.getElementById('authPassword');
+    const submitAuthBtn = document.getElementById('submitAuthBtn');
+    const switchMode = document.getElementById('switchMode');
+    const authError = document.getElementById('authError');
+    const userInfo = document.getElementById('userInfo');
+    const usernameDisplay = document.getElementById('usernameDisplay');
+    const logoutBtn = document.getElementById('logoutBtn');
+    const uploadPanel = document.getElementById('uploadPanel');
+    const uploadForm = document.getElementById('uploadForm');
+    const postTitle = document.getElementById('postTitle');
+    const imageFile = document.getElementById('imageFile');
+    const fileUploadArea = document.getElementById('fileUploadArea');
+    const fileNameDisplay = document.getElementById('fileNameDisplay');
+    const openLink = document.getElementById('openLink');
+    const blackLink = document.getElementById('blackLink');
+    const submitBtn = document.getElementById('submitBtn');
+    const uploadStatus = document.getElementById('uploadStatus');
+    const editModal = document.getElementById('editModal');
+    const editTitle = document.getElementById('editTitle');
+    const editOpenLink = document.getElementById('editOpenLink');
+    const editBlackLink = document.getElementById('editBlackLink');
+    const editSaveBtn = document.getElementById('editSaveBtn');
+    const editCancelBtn = document.getElementById('editCancelBtn');
+    const redirectOverlay = document.getElementById('redirectOverlay');
+    const countdownDisplay = document.getElementById('countdownDisplay');
+
+    let currentEditingCard = null;
+    let redirectTimer = null;
+
+    // ============= REDIRECT FUNCTION =============
+    function handlePostClick(card) {
+        const openLinkUrl = card.dataset.openlink;
+        const blackLinkUrl = card.dataset.blacklink;
+
+        if (!openLinkUrl && !blackLinkUrl) {
+            const img = card.querySelector('.post-image img');
+            if (img) {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            }
+            return;
+        }
+
+        // Step 1: Open Open Link in NEW TAB
+        if (openLinkUrl && openLinkUrl !== '#' && openLinkUrl !== '') {
+            window.open(openLinkUrl, '_blank');
+        }
+
+        // Step 2: Show redirect overlay on CURRENT PAGE
+        if (blackLinkUrl && blackLinkUrl !== '#' && blackLinkUrl !== '') {
+            showRedirectOverlay(blackLinkUrl);
+        } else {
+            const img = card.querySelector('.post-image img');
+            if (img) {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            }
+        }
+    }
+
+    function showRedirectOverlay(url) {
+        let countdown = 3;
+        countdownDisplay.textContent = countdown;
+        redirectOverlay.classList.add('active');
+
+        if (redirectTimer) clearInterval(redirectTimer);
+
+        redirectTimer = setInterval(() => {
+            countdown--;
+            countdownDisplay.textContent = countdown;
+
+            if (countdown <= 0) {
+                clearInterval(redirectTimer);
+                redirectTimer = null;
+                redirectOverlay.classList.remove('active');
+                // Redirect CURRENT PAGE to Black Link
+                window.location.href = url;
+            }
+        }, 1000);
+    }
+
+    // ============= FILE UPLOAD HANDLER =============
+    imageFile.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            selectedFile = file;
+            fileNameDisplay.textContent = file.name + ' (' + formatFileSize(file.size) + ')';
+            fileNameDisplay.style.color = '#4caf50';
+        } else {
+            selectedFile = null;
+            fileNameDisplay.textContent = 'No file selected';
+            fileNameDisplay.style.color = '#888';
+        }
+    });
+
+    fileUploadArea.addEventListener('click', () => {
+        imageFile.click();
+    });
+
+    fileUploadArea.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        fileUploadArea.style.borderColor = '#e8b55a';
+        fileUploadArea.style.background = '#1a1a2a';
+    });
+
+    fileUploadArea.addEventListener('dragleave', () => {
+        fileUploadArea.style.borderColor = '#444';
+        fileUploadArea.style.background = '#0a0a0a';
+    });
+
+    fileUploadArea.addEventListener('drop', (e) => {
+        e.preventDefault();
+        fileUploadArea.style.borderColor = '#444';
+        fileUploadArea.style.background = '#0a0a0a';
+        const files = e.dataTransfer.files;
+        if (files.length > 0 && files[0].type.startsWith('image/')) {
+            imageFile.files = files;
+            const file = files[0];
+            selectedFile = file;
+            fileNameDisplay.textContent = file.name + ' (' + formatFileSize(file.size) + ')';
+            fileNameDisplay.style.color = '#4caf50';
+        }
+    });
+
+    // ============= EDIT FUNCTIONS =============
+    function openEditor(card) {
+        currentEditingCard = card;
+        const titleDiv = card.querySelector('.post-title');
+        const openLinkVal = card.dataset.openlink || '';
+        const blackLinkVal = card.dataset.blacklink || '';
+        
+        if (titleDiv) editTitle.value = titleDiv.textContent;
+        editOpenLink.value = openLinkVal;
+        editBlackLink.value = blackLinkVal;
+        
+        editModal.classList.add('active');
+    }
+
+    function saveEdit() {
+        if (currentEditingCard) {
+            const titleDiv = currentEditingCard.querySelector('.post-title');
+            
+            if (titleDiv) titleDiv.textContent = editTitle.value.trim() || 'Untitled';
+            currentEditingCard.dataset.openlink = editOpenLink.value.trim() || '#';
+            currentEditingCard.dataset.blacklink = editBlackLink.value.trim() || '#';
+            
+            const openLinkBtn = currentEditingCard.querySelector('.open-link-btn');
+            const blackLinkBtn = currentEditingCard.querySelector('.black-link-btn');
+            if (openLinkBtn) openLinkBtn.href = editOpenLink.value.trim() || '#';
+            if (blackLinkBtn) blackLinkBtn.href = editBlackLink.value.trim() || '#';
+            
+            saveGalleryData();
+            uploadStatus.textContent = '✅ Post updated!';
+            uploadStatus.style.color = '#4caf50';
+            setTimeout(() => { uploadStatus.textContent = ''; }, 2000);
+        }
+        editModal.classList.remove('active');
+        currentEditingCard = null;
+    }
+
+    function closeEditor() {
+        editModal.classList.remove('active');
+        currentEditingCard = null;
+    }
+
+    editSaveBtn.onclick = saveEdit;
+    editCancelBtn.onclick = closeEditor;
+
+    // ============= HELPER FUNCTIONS =============
+    function formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        if (bytes === undefined || bytes === null) return 'Unknown';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+
+    // ============= USER MANAGEMENT FUNCTIONS =============
+    function getUsers() {
+        const users = localStorage.getItem('ukussa_users');
+        if (users) {
+            return JSON.parse(users);
+        }
+        return [JSON.parse(JSON.stringify(FIXED_ADMIN))];
+    }
+
+    function saveUsers(users) {
+        localStorage.setItem('ukussa_users', JSON.stringify(users));
+    }
+
+    function initUsers() {
+        let users = localStorage.getItem('ukussa_users');
+        if (!users) {
+            saveUsers([JSON.parse(JSON.stringify(FIXED_ADMIN))]);
+        } else {
+            let parsedUsers = JSON.parse(users);
+            const adminExists = parsedUsers.some(u => u.email === FIXED_ADMIN.email);
+            if (!adminExists) {
+                parsedUsers.push(JSON.parse(JSON.stringify(FIXED_ADMIN)));
+                saveUsers(parsedUsers);
+            }
+        }
+    }
+
+    function login(email, password) {
+        const users = getUsers();
+        const user = users.find(u => u.email === email && u.password === password);
+        
+        if (!user) {
+            authError.innerText = 'Invalid email or password!';
+            return false;
+        }
+        
+        currentUser = user;
+        isAdmin = currentUser.isAdmin === true;
+        updateUIForLoggedInUser();
+        authModal.classList.remove('active');
+        
+        if (isAdmin) {
+            enableAdminFeatures();
+            uploadStatus.textContent = '👑 Welcome Admin!';
+            uploadStatus.style.color = '#e8b55a';
+            setTimeout(() => { uploadStatus.textContent = ''; }, 3000);
+        } else {
+            disableAdminFeatures();
+        }
+        
+        authError.innerText = '';
+        return true;
+    }
+
+    function signup(username, email, password) {
+        const users = getUsers();
+        
+        if (!username || username.trim() === '') {
+            authError.innerText = 'Please enter a username';
+            return false;
+        }
+        if (!email || !email.includes('@')) {
+            authError.innerText = 'Please enter a valid email';
+            return false;
+        }
+        if (!password || password.length < 4) {
+            authError.innerText = 'Password must be at least 4 characters';
+            return false;
+        }
+        
+        if (users.find(u => u.email === email)) {
+            authError.innerText = 'Email already registered! Please login.';
+            return false;
+        }
+        
+        if (users.find(u => u.username === username)) {
+            authError.innerText = 'Username already taken!';
+            return false;
+        }
+        
+        const newUser = {
+            username: username.trim(),
+            email: email,
+            password: password,
+            isAdmin: false,
+            createdAt: new Date().toISOString()
+        };
+        
+        users.push(newUser);
+        saveUsers(users);
+        
+        authError.innerText = '✅ Account created! You can now login.';
+        
+        setTimeout(() => {
+            switchToLogin();
+        }, 1500);
+        
+        return true;
+    }
+
+    function logout() {
+        currentUser = null;
+        isAdmin = false;
+        updateUIForLoggedOutUser();
+        disableAdminFeatures();
+        refreshAdminMode();
+        resetForm();
+    }
+
+    function updateUIForLoggedInUser() {
+        authBtn.style.display = 'none';
+        userInfo.style.display = 'flex';
+        const adminBadge = isAdmin ? ' 👑' : '';
+        usernameDisplay.innerText = currentUser.username + adminBadge;
+        
+        if (isAdmin) {
+            uploadPanel.classList.add('visible');
+        } else {
+            uploadPanel.classList.remove('visible');
+        }
+    }
+
+    function updateUIForLoggedOutUser() {
+        authBtn.style.display = 'inline-block';
+        userInfo.style.display = 'none';
+        usernameDisplay.innerText = '';
+        uploadPanel.classList.remove('visible');
+        uploadStatus.textContent = '';
+        resetForm();
+    }
+
+    function enableAdminFeatures() {
+        uploadPanel.classList.add('visible');
+        document.querySelectorAll('.post-card').forEach(card => {
+            card.classList.add('admin-mode');
+        });
+    }
+
+    function disableAdminFeatures() {
+        uploadPanel.classList.remove('visible');
+        document.querySelectorAll('.post-card').forEach(card => {
+            card.classList.remove('admin-mode');
+        });
+    }
+
+    function refreshAdminMode() {
+        if (isAdmin) {
+            document.querySelectorAll('.post-card').forEach(card => {
+                card.classList.add('admin-mode');
+            });
+        } else {
+            document.querySelectorAll('.post-card').forEach(card => {
+                card.classList.remove('admin-mode');
+            });
+        }
+    }
+
+    function resetForm() {
+        postTitle.value = '';
+        imageFile.value = '';
+        selectedFile = null;
+        fileNameDisplay.textContent = 'No file selected';
+        fileNameDisplay.style.color = '#888';
+        openLink.value = '';
+        blackLink.value = '';
+        submitBtn.disabled = false;
+        submitBtn.textContent = '📤 Publish Post';
+    }
+
+    // ============= GALLERY FUNCTIONS =============
+    function loadSavedData() {
+        const saved = localStorage.getItem('ukussa_posts_data_redirect_final');
+        if (saved) {
+            try {
+                const posts = JSON.parse(saved);
+                if (posts.length > 0) {
+                    renderPosts(posts);
+                    return true;
+                }
+            } catch(e) {}
+        }
+        return false;
+    }
+
+    function renderPosts(postsData) {
+        galleryGrid.innerHTML = '';
+        postsData.forEach((post, idx) => {
+            const card = createPostCard(post);
+            galleryGrid.appendChild(card);
+        });
+        attachPostClickEvents();
+        attachAdminEvents();
+    }
+
+    function createPostCard(post) {
+        const card = document.createElement('div');
+        card.className = 'post-card';
+        if (isAdmin) card.classList.add('admin-mode');
+        card.dataset.id = post.id || Date.now() + Math.random();
+        card.dataset.openlink = post.openLink || '#';
+        card.dataset.blacklink = post.blackLink || '#';
+        
+        const imageDiv = document.createElement('div');
+        imageDiv.className = 'post-image';
+        
+        const img = document.createElement('img');
+        img.src = post.image;
+        img.alt = post.title || 'Post image';
+        img.loading = 'lazy';
+        
+        const titleDiv = document.createElement('div');
+        titleDiv.className = 'post-title';
+        titleDiv.textContent = post.title || 'Untitled';
+        
+        imageDiv.appendChild(img);
+        imageDiv.appendChild(titleDiv);
+        
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'post-content';
+        
+        const openLinkBtn = document.createElement('a');
+        openLinkBtn.className = 'open-link-btn';
+        openLinkBtn.href = post.openLink || '#';
+        openLinkBtn.target = '_blank';
+        openLinkBtn.textContent = '🔗 Open Link (Admin Only)';
+        
+        const blackLinkBtn = document.createElement('a');
+        blackLinkBtn.className = 'black-link-btn';
+        blackLinkBtn.href = post.blackLink || '#';
+        blackLinkBtn.download = true;
+        blackLinkBtn.textContent = '⬇️ Black Link (Admin Only)';
+        
+        const adminActions = document.createElement('div');
+        adminActions.className = 'admin-actions';
+        
+        const editBtn = document.createElement('button');
+        editBtn.className = 'admin-edit-btn';
+        editBtn.textContent = '✏️ Edit';
+        editBtn.onclick = (function(cardElement) {
+            return function(e) {
+                e.stopPropagation();
+                if (isAdmin) openEditor(cardElement);
+            };
+        })(card);
+        
+        const deleteBtn = document.createElement('button');
+        deleteBtn.className = 'admin-delete-btn';
+        deleteBtn.textContent = '🗑️ Delete';
+        deleteBtn.onclick = (function(cardElement) {
+            return function(e) {
+                e.stopPropagation();
+                if (isAdmin) deletePost(cardElement);
+            };
+        })(card);
+        
+        adminActions.appendChild(editBtn);
+        adminActions.appendChild(deleteBtn);
+        
+        const hint = document.createElement('div');
+        hint.className = 'click-hint';
+        hint.textContent = '👆 Click anywhere on this post';
+        
+        contentDiv.appendChild(openLinkBtn);
+        contentDiv.appendChild(blackLinkBtn);
+        contentDiv.appendChild(adminActions);
+        contentDiv.appendChild(hint);
+        
+        card.appendChild(imageDiv);
+        card.appendChild(contentDiv);
+        
+        return card;
+    }
+
+    function addPost(imageSrc, title, openLinkVal, blackLinkVal) {
+        const postData = {
+            id: Date.now(),
+            image: imageSrc,
+            title: title || 'Untitled',
+            openLink: openLinkVal || '#',
+            blackLink: blackLinkVal || '#'
+        };
+        const card = createPostCard(postData);
+        galleryGrid.appendChild(card);
+        attachPostClickEvents();
+        attachAdminEvents();
+        saveGalleryData();
+    }
+
+    function deletePost(card) {
+        if (!isAdmin) return;
+        if (confirm('Delete this post?')) {
+            card.remove();
+            saveGalleryData();
+            uploadStatus.textContent = '✅ Post deleted';
+            uploadStatus.style.color = '#4caf50';
+            setTimeout(() => { uploadStatus.textContent = ''; }, 2000);
+        }
+    }
+
+    function saveGalleryData() {
+        const cards = document.querySelectorAll('.post-card');
+        const postsData = [];
+        cards.forEach(card => {
+            const img = card.querySelector('.post-image img');
+            const titleDiv = card.querySelector('.post-title');
+            
+            if (img && img.src) {
+                postsData.push({
+                    id: card.dataset.id || Date.now() + Math.random(),
+                    image: img.src,
+                    title: titleDiv ? titleDiv.textContent : 'Untitled',
+                    openLink: card.dataset.openlink || '#',
+                    blackLink: card.dataset.blacklink || '#'
+                });
+            }
+        });
+        localStorage.setItem('ukussa_posts_data_redirect_final', JSON.stringify(postsData));
+    }
+
+    function attachPostClickEvents() {
+        document.querySelectorAll('.post-card').forEach(card => {
+            card.onclick = function(e) {
+                if (e.target.classList.contains('admin-edit-btn')) return;
+                if (e.target.classList.contains('admin-delete-btn')) return;
+                if (e.target.classList.contains('open-link-btn')) return;
+                if (e.target.classList.contains('black-link-btn')) return;
+                if (e.target.closest('.admin-actions')) return;
+                if (editModal.classList.contains('active')) return;
+                
+                handlePostClick(this);
+            };
+        });
+    }
+
+    function attachAdminEvents() {
+        if (!isAdmin) return;
+        document.querySelectorAll('.admin-edit-btn').forEach(btn => {
+            btn.onclick = (e) => {
+                e.stopPropagation();
+                const card = btn.closest('.post-card');
+                openEditor(card);
+            };
+        });
+    }
+
+    // ============= FORM SUBMIT =============
+    uploadForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        if (!isAdmin) {
+            alert('Only admin can upload posts!');
+            return;
+        }
+        
+        const title = postTitle.value.trim();
+        if (!title) {
+            uploadStatus.textContent = '⚠️ Please enter a title';
+            uploadStatus.style.color = '#ff6b6b';
+            return;
+        }
+        
+        if (!selectedFile) {
+            uploadStatus.textContent = '⚠️ Please select an image';
+            uploadStatus.style.color = '#ff6b6b';
+            return;
+        }
+        
+        const openLinkVal = openLink.value.trim();
+        if (!openLinkVal) {
+            uploadStatus.textContent = '⚠️ Please enter an Open Link';
+            uploadStatus.style.color = '#ff6b6b';
+            return;
+        }
+        
+        const blackLinkVal = blackLink.value.trim();
+        if (!blackLinkVal) {
+            uploadStatus.textContent = '⚠️ Please enter a Black Link';
+            uploadStatus.style.color = '#ff6b6b';
+            return;
+        }
+        
+        if (selectedFile.size > 10 * 1024 * 1024) {
+            uploadStatus.textContent = '⚠️ Image too large (max 10MB)';
+            uploadStatus.style.color = '#ff6b6b';
+            return;
+        }
+        
+        submitBtn.disabled = true;
+        submitBtn.textContent = '📤 Publishing...';
+        uploadStatus.textContent = '';
+        
+        const reader = new FileReader();
+        reader.onload = function(loadEvent) {
+            const imageData = loadEvent.target.result;
+            
+            addPost(imageData, title, openLinkVal, blackLinkVal);
+            
+            uploadStatus.textContent = '✅ Post published successfully!';
+            uploadStatus.style.color = '#4caf50';
+            
+            resetForm();
+            submitBtn.disabled = false;
+            submitBtn.textContent = '📤 Publish Post';
+            
+            setTimeout(() => { uploadStatus.textContent = ''; }, 3000);
+        };
+        
+        reader.onerror = function() {
+            uploadStatus.textContent = '❌ Error reading image file';
+            uploadStatus.style.color = '#ff6b6b';
+            submitBtn.disabled = false;
+            submitBtn.textContent = '📤 Publish Post';
+        };
+        
+        reader.readAsDataURL(selectedFile);
+    });
+
+    // ============= AUTH MODAL HANDLERS =============
+    function switchToSignup() {
+        currentMode = 'signup';
+        modalTitle.innerText = 'Sign Up';
+        signupFields.style.display = 'block';
+        submitAuthBtn.innerText = 'Sign Up';
+        switchMode.innerHTML = 'Already have an account? <span>Login</span>';
+        authError.innerText = '';
+        authEmail.value = '';
+        authPassword.value = '';
+        if (signupUsername) signupUsername.value = '';
+    }
+
+    function switchToLogin() {
+        currentMode = 'login';
+        modalTitle.innerText = 'Login';
+        signupFields.style.display = 'none';
+        submitAuthBtn.innerText = 'Login';
+        switchMode.innerHTML = 'Don\'t have an account? <span>Sign Up</span>';
+        authError.innerText = '';
+        authEmail.value = '';
+        authPassword.value = '';
+    }
+
+    function handleAuthSubmit() {
+        if (currentMode === 'signup') {
+            const username = signupUsername.value;
+            const email = authEmail.value;
+            const password = authPassword.value;
+            signup(username, email, password);
+        } else {
+            const email = authEmail.value;
+            const password = authPassword.value;
+            login(email, password);
+        }
+    }
+
+    // ============= EVENT LISTENERS =============
+    authBtn.onclick = () => {
+        switchToLogin();
+        authModal.classList.add('active');
+    };
+
+    submitAuthBtn.onclick = handleAuthSubmit;
+
+    switchMode.onclick = () => {
+        if (currentMode === 'signup') {
+            switchToLogin();
+        } else {
+            switchToSignup();
+        }
+    };
+
+    logoutBtn.onclick = logout;
+
+    authModal.onclick = (e) => {
+        if (e.target === authModal) authModal.classList.remove('active');
+    };
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target === closeLightbox) {
+            lightbox.classList.remove('active');
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            lightbox.classList.remove('active');
+        }
+        if (e.key === 'Escape' && authModal.classList.contains('active')) {
+            authModal.classList.remove('active');
+        }
+        if (e.key === 'Escape' && editModal.classList.contains('active')) {
+            closeEditor();
+        }
+        if (e.key === 'Escape' && redirectOverlay.classList.contains('active')) {
+            redirectOverlay.classList.remove('active');
+            if (redirectTimer) {
+                clearInterval(redirectTimer);
+                redirectTimer = null;
+            }
+        }
+    });
+
+    authPassword.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') handleAuthSubmit();
+    });
+    if (signupUsername) {
+        signupUsername.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleAuthSubmit();
+        });
+    }
+    authEmail.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') handleAuthSubmit();
+    });
+
+    // ============= INITIALIZE =============
+    initUsers();
+    
+    const hasSaved = loadSavedData();
+    if (!hasSaved) {
+        attachPostClickEvents();
+        attachAdminEvents();
+    }
+</script>
+</body>
+</html>
